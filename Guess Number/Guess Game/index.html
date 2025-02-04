@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Guess My Number!</title>
+</head>
+
+<body>
+  <header>
+    <h1>What number am I thinking of?</h1>
+    <button class="btn retry">Retry</button>
+    <button class="btn rules">Rules</button>
+    <div class="number">?</div>
+  </header>
+  <main>
+    <section class="left">
+      <input type="number" class="guess" />
+      <button class="btn check">Verify</button>
+    </section>
+    <section class="right">
+      <p class="message">Let's see if you can guess what number I'm thinking of!</p>
+      <p class="label-score">Score: <span class="score">20</span></p>
+      <p class="label-highscore">
+        Top score: <span class="highscore">0</span>
+      </p>
+    </section>
+  </main>
+  <div class="modal hidden">
+    <button class="close-modal">&times;</button>
+    <h1>The Rules of the Game</h1>
+    <p>
+      &emsp;&emsp;&emsp;To play, you need to enter a number between 1 and 20 in the box located below the button labeled
+      "Check!". Then,
+      press this button and, in the square that contains the question mark, you will see the secret number you need to
+      guess (provided that the entered number was correct).
+      <br>
+      &emsp;&emsp;&emsp;If the entered number is greater than the secret number, you will receive the message "Too
+      high!",
+      and if it is
+      lower, the message "Too low!" will appear. Each time you guess incorrectly and press the "Verify"
+      button, your
+      score will decrease. It is important to note that the highest score will be recorded.
+      <br>
+      &emsp;&emsp;&emsp;If you guess the secret number, the screen will turn green, and you will have the option to
+      press
+      the "Retry"
+      button to start a new round.
+    </p>
+  </div>
+  <div class="overlay hidden"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
